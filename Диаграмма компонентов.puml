@@ -1,0 +1,28 @@
+@startuml
+skinparam component {
+    BackgroundColor LightGreen
+    BorderColor Black
+    ArrowColor Black
+}
+
+package "Механика предметов" {
+    component "Создание предметов" as 1
+    component "Хранение предметов" as 2
+    component "Нахождение предметов во время игрового процесса" as 3
+    component "Удаление предметов" as 4
+    }
+
+package "Совершение выборов" {
+    component "Выбор из вариантов" as 5
+    component "Забрать предмет" as 6
+    component "Использовать предмет" as 7
+    component "Открыть инвентарь" as 8
+    }
+
+' Связи между компонентами
+6 --> 1
+7 --> 4
+8 --> 2
+5 --> 3
+
+@enduml

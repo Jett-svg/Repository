@@ -1,0 +1,25 @@
+@startuml
+' Диаграмма классов для ИТЗ
+skinparam classAttributeIconSize 0
+skinparam class {
+    BackgroundColor LightBlue
+    BorderColor Black
+    ArrowColor Black
+}
+
+class Item {
+     - name: имя
+     - emoji: обозначение
+     - type: тип
+}
+
+class Inventory {
+      - add_item: добавление предмета
+      - show_inventory: показать инвентарь
+      - delete_item: удалить предмет
+      - use_item: использование предметов
+}
+
+' Отношения
+Item --|> Inventory
+@enduml
